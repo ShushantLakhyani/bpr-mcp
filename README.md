@@ -7,6 +7,10 @@ A small, free [Model Context Protocol](https://modelcontextprotocol.io) server t
 - **Read-only.** It cannot change anything anywhere.
 - **MIT licensed.** See [LICENSE](./LICENSE).
 
+## One-click bundle (MCPB)
+
+Each [release](https://github.com/ShushantLakhyani/bpr-mcp/releases) has a `bpr-mcp-<version>.mcpb` bundle (built from `manifest.json`, `bpr-mcp.mjs` and `LICENSE`) for clients that install MCP Bundles, such as Claude Desktop. Its SHA-256 is listed in the release notes.
+
 ## Tools
 
 | Tool               | What it does                                                                                                                                                        |

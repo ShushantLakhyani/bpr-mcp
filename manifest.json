@@ -1,0 +1,40 @@
+{
+  "manifest_version": "0.3",
+  "name": "bpr-mcp",
+  "display_name": "Best Productivity Resources",
+  "version": "1.0.0",
+  "description": "Search 1,000+ hand-picked productivity tools from the Best Productivity Resources directory. No API key, no tracking.",
+  "long_description": "A free, read-only MCP server for the Best Productivity Resources directory. It downloads the public catalogue at https://bestproductivityresources.com/resources.json (cached in memory for six hours) and lets your assistant search it, fetch one listing or list categories. No API key, no account, no analytics, no telemetry, and no dependencies.",
+  "author": {
+    "name": "Shushant Lakhyani",
+    "url": "https://bestproductivityresources.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShushantLakhyani/bpr-mcp.git"
+  },
+  "homepage": "https://bestproductivityresources.com/mcp",
+  "documentation": "https://github.com/ShushantLakhyani/bpr-mcp#readme",
+  "support": "https://github.com/ShushantLakhyani/bpr-mcp/issues",
+  "keywords": ["productivity", "tools", "directory", "search"],
+  "privacy_policies": ["https://bestproductivityresources.com/privacy"],
+  "server": {
+    "type": "node",
+    "entry_point": "server/bpr-mcp.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/bpr-mcp.mjs"],
+      "env": {}
+    }
+  },
+  "tools": [
+    { "name": "search_resources", "description": "Search the directory by keywords, with optional category, type and pricing filters." },
+    { "name": "get_resource", "description": "Get one resource by slug, directory page URL or exact name." },
+    { "name": "list_categories", "description": "List every category with how many resources it holds." }
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": { "node": ">=18.0.0" }
+  }
+}
