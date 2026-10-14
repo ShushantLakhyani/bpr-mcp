@@ -1,0 +1,25 @@
+{
+  "name": "bpr-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Best Productivity Resources directory: search 1,000+ hand-picked productivity tools from Claude, Cursor and other MCP clients.",
+  "license": "MIT",
+  "author": "Shushant Lakhyani",
+  "homepage": "https://bestproductivityresources.com/mcp",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "bpr-mcp": "./bpr-mcp.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "bun build.ts",
+    "typecheck": "tsc -p . --noEmit",
+    "start": "node bpr-mcp.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShushantLakhyani/bpr-mcp.git"
+  }
+}
